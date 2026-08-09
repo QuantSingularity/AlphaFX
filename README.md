@@ -3,7 +3,9 @@
 Institutional-grade FX analytics and trading intelligence platform.
 Django 5 backend, FastAPI AI microservice, React 18 frontend.
 
----
+<div align="center">
+  <img src="docs/images/homepage.bmp" alt="AlphaFX HomePage" width="80%">
+</div>
 
 ## Project Layout
 

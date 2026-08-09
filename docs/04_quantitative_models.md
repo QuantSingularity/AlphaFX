@@ -244,20 +244,20 @@ Range: 0 (fully diversified) to 1 (single-position concentration).
 
 ## Technical Indicators
 
-| Indicator       | Formula summary                                                |
+| Indicator | Formula summary |
 | --------------- | -------------------------------------------------------------- | ---- | --- | ---- | -------------- |
-| RSI (period p)  | 100 - 100/(1 + AvgGain_EWMA / AvgLoss_EWMA), Wilder EWMA       |
-| MACD            | EMA(12) - EMA(26); signal = EMA(9) of MACD line                |
-| Bollinger Bands | SMA(20) +/- 2 \* RollingStd(20)                                |
-| ATR             | max(H-L,                                                       | H-Cp | ,   | L-Cp | ); Wilder EWMA |
-| Stochastic %K   | 100 \* (C - LowestLow(14)) / (HighestHigh(14) - LowestLow(14)) |
-| Stochastic %D   | SMA(3) of %K                                                   |
-| Williams %R     | -100 \* (HighestHigh - C) / (HighestHigh - LowestLow)          |
-| Ichimoku Tenkan | (Max(9) + Min(9)) / 2                                          |
-| Ichimoku Kijun  | (Max(26) + Min(26)) / 2                                        |
-| Span A          | (Tenkan + Kijun) / 2                                           |
-| Span B          | (Max(52) + Min(52)) / 2                                        |
-| VWAP            | Cumsum(C \* V) / Cumsum(V)                                     |
-| Pivot (P)       | (H + L + C) / 3                                                |
-| R1              | 2P - L                                                         |
-| S1              | 2P - H                                                         |
+| RSI (period p) | 100 - 100/(1 + AvgGain_EWMA / AvgLoss_EWMA), Wilder EWMA |
+| MACD | EMA(12) - EMA(26); signal = EMA(9) of MACD line |
+| Bollinger Bands | SMA(20) +/- 2 \* RollingStd(20) |
+| ATR | max(H-L, | H-Cp | , | L-Cp | ); Wilder EWMA |
+| Stochastic %K | 100 \* (C - LowestLow(14)) / (HighestHigh(14) - LowestLow(14)) |
+| Stochastic %D | SMA(3) of %K |
+| Williams %R | -100 \* (HighestHigh - C) / (HighestHigh - LowestLow) |
+| Ichimoku Tenkan | (Max(9) + Min(9)) / 2 |
+| Ichimoku Kijun | (Max(26) + Min(26)) / 2 |
+| Span A | (Tenkan + Kijun) / 2 |
+| Span B | (Max(52) + Min(52)) / 2 |
+| VWAP | Cumsum(C \* V) / Cumsum(V) |
+| Pivot (P) | (H + L + C) / 3 |
+| R1 | 2P - L |
+| S1 | 2P - H |

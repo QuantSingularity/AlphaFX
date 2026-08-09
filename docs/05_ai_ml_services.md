@@ -152,12 +152,12 @@ returns, range, gap, volume Z-score, return Z-score, range Z-score.
 
 ### Severity classification
 
-| Condition                        | Severity |
+| Condition | Severity |
 | -------------------------------- | -------- | ----------------------- | ------ |
-| No flag from either layer        | NORMAL   |
-| Either layer flags, mild signals | LOW      |
-|                                  | ret_z    | > 4 or IF score < -0.20 | MEDIUM |
-|                                  | ret_z    | > 5 or IF score < -0.30 | HIGH   |
+| No flag from either layer | NORMAL |
+| Either layer flags, mild signals | LOW |
+| | ret_z | > 4 or IF score < -0.20 | MEDIUM |
+| | ret_z | > 5 or IF score < -0.30 | HIGH |
 
 ---
 
