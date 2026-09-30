@@ -96,7 +96,7 @@ spec:
                 name: backend
                 port:
                   number: 8000
-          # AI microservice API (internal — only expose if needed externally)
+          # AI microservice API (internal - only expose if needed externally)
           - path: /ai/
             pathType: Prefix
             backend:

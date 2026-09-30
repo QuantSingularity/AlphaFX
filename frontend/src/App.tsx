@@ -39,7 +39,7 @@ const S = (C: React.ComponentType) => (
   </Suspense>
 );
 
-// NOTE: BrowserRouter + AuthProvider are in main.tsx — never nest them here.
+// NOTE: BrowserRouter + AuthProvider are in main.tsx - never nest them here.
 export default function App() {
   return (
     <Routes>

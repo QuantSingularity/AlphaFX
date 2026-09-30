@@ -316,7 +316,7 @@ export default function Home() {
 
               <p className="fade-up fade-up-3 text-slate-400 text-lg leading-relaxed mb-10 max-w-lg">
                 Real-time rates, options pricing, portfolio analytics, and
-                AI-powered signals — everything a professional FX trader needs,
+                AI-powered signals - everything a professional FX trader needs,
                 unified in one platform.
               </p>
 
@@ -532,7 +532,7 @@ export default function Home() {
               {
                 icon: "📊",
                 title: "Technical Analysis",
-                desc: "RSI, MACD, Bollinger Bands, Fibonacci, support/resistance levels and more — all calculated server-side.",
+                desc: "RSI, MACD, Bollinger Bands, Fibonacci, support/resistance levels and more - all calculated server-side.",
               },
               {
                 icon: "💼",
@@ -595,7 +595,7 @@ export default function Home() {
             </h2>
             <p className="text-slate-400 mb-8 max-w-md mx-auto text-sm">
               Join professional FX traders already using AlphaFX. Free tier
-              available — no credit card required.
+              available - no credit card required.
             </p>
             <div className="flex justify-center gap-3 flex-wrap">
               <Link

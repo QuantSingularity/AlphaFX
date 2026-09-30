@@ -157,7 +157,7 @@ def pip_value(pair: str, notional: float, spot: float) -> float:
         return ps * notional
     if pair.startswith("USD"):
         return ps * notional / spot
-    # Cross pair — approximate via USD
+    # Cross pair - approximate via USD
     return ps * notional / spot
 
 

@@ -29,7 +29,7 @@ def position_pnl(
     elif pair.startswith("USD"):
         raw = (1 / entry_rate - 1 / current_rate) * notional
     else:
-        # Cross pair — express PnL in quote currency, approximate to USD
+        # Cross pair - express PnL in quote currency, approximate to USD
         raw = (current_rate - entry_rate) * notional
 
     return raw if side.lower() == "buy" else -raw

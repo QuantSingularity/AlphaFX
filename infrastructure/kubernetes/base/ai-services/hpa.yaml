@@ -28,7 +28,7 @@ spec:
           averageUtilization: 75
   behavior:
     scaleDown:
-      stabilizationWindowSeconds: 600 # Longer window — model unloading is expensive
+      stabilizationWindowSeconds: 600 # Longer window - model unloading is expensive
       policies:
         - type: Pods
           value: 1

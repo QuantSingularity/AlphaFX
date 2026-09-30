@@ -47,7 +47,7 @@ try:
     CORS_ALLOWED_ORIGINS = env("CORS_ALLOWED_ORIGINS")
 
 except ImportError:
-    # django-environ not installed — read directly from os.environ
+    # django-environ not installed - read directly from os.environ
     SECRET_KEY = os.environ.get(
         "SECRET_KEY", "django-insecure-alphafx-dev-key-change-in-production"
     )
@@ -128,7 +128,7 @@ ASGI_APPLICATION = "alphafx.asgi.application"
 WSGI_APPLICATION = "alphafx.wsgi.application"
 
 # ---------------------------------------------------------------------------
-# Database — try dj-database-url, fall back to plain sqlite config
+# Database - try dj-database-url, fall back to plain sqlite config
 # ---------------------------------------------------------------------------
 
 try:
@@ -150,11 +150,11 @@ except ImportError:
     }
 
 # ---------------------------------------------------------------------------
-# Cache — try django-redis, fall back to LocMemCache so tests work without Redis
+# Cache - try django-redis, fall back to LocMemCache so tests work without Redis
 # ---------------------------------------------------------------------------
 
 try:
-    import django_redis  # noqa: F401 — just checking it is importable
+    import django_redis  # noqa: F401 - just checking it is importable
 
     CACHES = {
         "default": {
@@ -175,7 +175,7 @@ except ImportError:
     }
 
 # ---------------------------------------------------------------------------
-# Channel layers — try channels-redis, fall back to InMemoryChannelLayer
+# Channel layers - try channels-redis, fall back to InMemoryChannelLayer
 # ---------------------------------------------------------------------------
 
 try:

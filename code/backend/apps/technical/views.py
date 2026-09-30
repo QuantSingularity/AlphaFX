@@ -23,7 +23,7 @@ from rest_framework.views import APIView
 
 
 class TechnicalAnalysisView(APIView):
-    """GET /api/v1/technical/{pair}/ — Full technical analysis for a pair."""
+    """GET /api/v1/technical/{pair}/ - Full technical analysis for a pair."""
 
     @extend_schema(
         tags=["technical"],
@@ -46,7 +46,7 @@ class TechnicalAnalysisView(APIView):
 
 
 class TechnicalScanView(APIView):
-    """GET /api/v1/technical/ — Scan all major pairs for signals."""
+    """GET /api/v1/technical/ - Scan all major pairs for signals."""
 
     @extend_schema(
         tags=["technical"],
@@ -91,7 +91,7 @@ class TechnicalScanView(APIView):
 
 
 class CorrelationMatrixView(APIView):
-    """GET /api/v1/technical/correlation/ — Rolling correlation matrix."""
+    """GET /api/v1/technical/correlation/ - Rolling correlation matrix."""
 
     @extend_schema(
         tags=["technical"],
@@ -124,7 +124,7 @@ class CorrelationMatrixView(APIView):
 
 
 class SupportResistanceView(APIView):
-    """GET /api/v1/technical/{pair}/support-resistance/ — S/R levels."""
+    """GET /api/v1/technical/{pair}/support-resistance/ - S/R levels."""
 
     @extend_schema(
         tags=["technical"],
@@ -207,7 +207,7 @@ class SupportResistanceView(APIView):
 
 
 class FibonacciView(APIView):
-    """GET /api/v1/technical/{pair}/fibonacci/ — Fibonacci retracement levels."""
+    """GET /api/v1/technical/{pair}/fibonacci/ - Fibonacci retracement levels."""
 
     @extend_schema(
         tags=["technical"],
@@ -253,7 +253,7 @@ class FibonacciView(APIView):
 
 
 class VolatilityAnalysisView(APIView):
-    """GET /api/v1/technical/{pair}/volatility/ — Historical volatility term structure."""
+    """GET /api/v1/technical/{pair}/volatility/ - Historical volatility term structure."""
 
     @extend_schema(
         tags=["technical"],

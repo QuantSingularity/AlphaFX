@@ -120,7 +120,7 @@ export default function Profile() {
         month: "long",
         year: "numeric",
       })
-    : "—";
+    : "-";
 
   return (
     <div className="p-6 space-y-6 max-w-3xl">
@@ -318,11 +318,11 @@ export default function Profile() {
             </p>
             <p className="text-xs text-slate-500 mt-0.5">
               {user?.plan === "free"
-                ? "Basic access — 5 pairs, 1 portfolio, basic charts."
+                ? "Basic access - 5 pairs, 1 portfolio, basic charts."
                 : user?.plan === "pro"
-                  ? "Full analytics — 40+ pairs, 10 portfolios, alerts, carry tools."
+                  ? "Full analytics - 40+ pairs, 10 portfolios, alerts, carry tools."
                   : user?.plan === "institutional"
-                    ? "Unlimited — API access, options pricing, priority support."
+                    ? "Unlimited - API access, options pricing, priority support."
                     : ""}
             </p>
           </div>

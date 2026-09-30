@@ -46,7 +46,7 @@ def _run_async(coro):
 
 
 class MajorPairsView(APIView):
-    """GET /api/v1/rates/ — All major pair live quotes."""
+    """GET /api/v1/rates/ - All major pair live quotes."""
 
     @extend_schema(tags=["rates"], summary="List major pair quotes")
     def get(self, request):
@@ -62,7 +62,7 @@ class MajorPairsView(APIView):
 
 
 class SpotRateView(APIView):
-    """GET /api/v1/rates/spot/{pair} — Single pair bid/ask/mid."""
+    """GET /api/v1/rates/spot/{pair} - Single pair bid/ask/mid."""
 
     @extend_schema(tags=["rates"], summary="Get spot rate for a single pair")
     def get(self, request, pair):
@@ -97,7 +97,7 @@ class SpotRateView(APIView):
 
 
 class SpotRateBatchView(APIView):
-    """POST /api/v1/rates/spot — Batch spot quotes."""
+    """POST /api/v1/rates/spot - Batch spot quotes."""
 
     @extend_schema(tags=["rates"], summary="Batch spot rates for multiple pairs")
     def post(self, request):
@@ -108,7 +108,7 @@ class SpotRateBatchView(APIView):
 
 
 class ForwardRateView(APIView):
-    """POST /api/v1/rates/forward — Forward rate via CIP."""
+    """POST /api/v1/rates/forward - Forward rate via CIP."""
 
     @extend_schema(tags=["rates"], summary="Calculate forward rate (CIP)")
     def post(self, request):
@@ -139,7 +139,7 @@ class ForwardRateView(APIView):
 
 
 class CrossRateView(APIView):
-    """POST /api/v1/rates/cross — Cross-rate via USD triangulation."""
+    """POST /api/v1/rates/cross - Cross-rate via USD triangulation."""
 
     @extend_schema(tags=["rates"], summary="Compute cross-rate via triangulation")
     def post(self, request):
@@ -159,7 +159,7 @@ class CrossRateView(APIView):
 
 
 class FXOptionView(APIView):
-    """POST /api/v1/rates/option — Garman-Kohlhagen option pricer."""
+    """POST /api/v1/rates/option - Garman-Kohlhagen option pricer."""
 
     @extend_schema(tags=["options"], summary="Price FX option (Garman-Kohlhagen)")
     def post(self, request):
@@ -222,7 +222,7 @@ class RiskReversalView(APIView):
 
 
 class CarryScreenView(APIView):
-    """GET /api/v1/rates/carry — Carry trade opportunities."""
+    """GET /api/v1/rates/carry - Carry trade opportunities."""
 
     @extend_schema(
         tags=["rates"],
@@ -240,7 +240,7 @@ class CarryScreenView(APIView):
 
 
 class InterestRatesView(APIView):
-    """GET /api/v1/rates/interest-rates — Central bank policy rates."""
+    """GET /api/v1/rates/interest-rates - Central bank policy rates."""
 
     @extend_schema(tags=["rates"], summary="Central bank interest rates")
     def get(self, request):
@@ -248,7 +248,7 @@ class InterestRatesView(APIView):
 
 
 class EconomicCalendarView(APIView):
-    """GET /api/v1/rates/calendar — Economic event calendar."""
+    """GET /api/v1/rates/calendar - Economic event calendar."""
 
     @extend_schema(tags=["rates"], summary="Economic calendar")
     def get(self, request):
@@ -281,7 +281,7 @@ class PipValueView(APIView):
 
 
 class AllPairsView(APIView):
-    """GET /api/v1/rates/all-pairs — Full pair list with rates."""
+    """GET /api/v1/rates/all-pairs - Full pair list with rates."""
 
     @extend_schema(tags=["rates"], summary="All available pairs")
     def get(self, request):

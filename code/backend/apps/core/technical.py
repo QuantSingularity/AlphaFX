@@ -129,7 +129,7 @@ def williams_r(
     close: pd.Series,
     period: int = 14,
 ) -> pd.Series:
-    """Williams %R — oscillator between -100 and 0."""
+    """Williams %R - oscillator between -100 and 0."""
     highest_high = high.rolling(period).max()
     lowest_low = low.rolling(period).min()
     return (

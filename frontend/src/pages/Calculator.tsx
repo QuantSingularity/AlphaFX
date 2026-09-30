@@ -2,7 +2,7 @@ import { useState } from "react";
 import { analyticsApi, ratesApi } from "../services/api";
 
 function fmt(n?: number, dp = 2) {
-  return n !== undefined && n !== null ? n.toFixed(dp) : "—";
+  return n !== undefined && n !== null ? n.toFixed(dp) : "-";
 }
 
 export default function Calculator() {

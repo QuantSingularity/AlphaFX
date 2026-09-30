@@ -203,8 +203,8 @@ def economic_calendar() -> list[dict]:
             "currency": "EUR",
             "event": "ECB Meeting Minutes",
             "impact": "high",
-            "forecast": "—",
-            "previous": "—",
+            "forecast": "-",
+            "previous": "-",
             "actual": None,
         },
         {
@@ -244,8 +244,8 @@ def economic_calendar() -> list[dict]:
             "currency": "USD",
             "event": "FOMC Minutes",
             "impact": "high",
-            "forecast": "—",
-            "previous": "—",
+            "forecast": "-",
+            "previous": "-",
             "actual": None,
         },
         # +3 days

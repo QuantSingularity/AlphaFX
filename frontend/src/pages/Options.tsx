@@ -3,7 +3,7 @@ import { ratesApi } from "../services/api";
 import type { FXOptionResult } from "../services/api";
 
 function fmt(n?: number, dp = 4) {
-  return n !== undefined ? n.toFixed(dp) : "—";
+  return n !== undefined ? n.toFixed(dp) : "-";
 }
 
 const DEFAULT = {

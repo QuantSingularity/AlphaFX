@@ -82,7 +82,7 @@ export default function Login() {
         .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; }
       `}</style>
 
-      {/* Left panel — branding */}
+      {/* Left panel - branding */}
       <div className="hidden lg:flex flex-col justify-between w-[480px] border-r border-white/5 p-12 relative overflow-hidden">
         <div
           style={{
@@ -126,7 +126,7 @@ export default function Login() {
             </h2>
             <p className="text-slate-500 text-sm mt-3 leading-relaxed">
               Real-time rates, portfolio analytics, options pricing, and
-              AI-powered trading signals — unified in one platform.
+              AI-powered trading signals - unified in one platform.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ export default function Login() {
         </div>
       </div>
 
-      {/* Right panel — form */}
+      {/* Right panel - form */}
       <div className="flex-1 flex items-center justify-center p-6">
         <div className="auth-card w-full max-w-[400px] space-y-7">
           {/* Mobile logo */}

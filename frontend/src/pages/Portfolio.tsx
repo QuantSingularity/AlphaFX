@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "react-query";
 import { portfolioApi } from "../services/api";
 
 function fmt(n?: number, dp = 2) {
-  return n !== undefined ? n.toFixed(dp) : "—";
+  return n !== undefined ? n.toFixed(dp) : "-";
 }
 
 export default function Portfolio() {

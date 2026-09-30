@@ -82,7 +82,7 @@ class StrategyBuilderSerializer(serializers.Serializer):
 
 
 class PositionSizeView(APIView):
-    """POST /api/v1/analytics/position-size — Fixed-risk position sizing."""
+    """POST /api/v1/analytics/position-size - Fixed-risk position sizing."""
 
     @extend_schema(
         tags=["analytics"], summary="Calculate position size from risk parameters"
@@ -135,7 +135,7 @@ class PositionSizeView(APIView):
 
 
 class RiskRewardView(APIView):
-    """POST /api/v1/analytics/risk-reward — Risk-reward ratio."""
+    """POST /api/v1/analytics/risk-reward - Risk-reward ratio."""
 
     @extend_schema(tags=["analytics"], summary="Calculate risk-reward ratio")
     def post(self, request):
@@ -176,7 +176,7 @@ class RiskRewardView(APIView):
 
 
 class PipValueView(APIView):
-    """POST /api/v1/analytics/pip-value — Pip value for any notional."""
+    """POST /api/v1/analytics/pip-value - Pip value for any notional."""
 
     @extend_schema(tags=["analytics"], summary="Calculate pip value")
     def post(self, request):
@@ -200,7 +200,7 @@ class PipValueView(APIView):
 
 
 class SwapRatesView(APIView):
-    """GET /api/v1/analytics/swap-rates — Swap / rollover rates for all pairs."""
+    """GET /api/v1/analytics/swap-rates - Swap / rollover rates for all pairs."""
 
     @extend_schema(tags=["analytics"], summary="Swap rates for all pairs")
     def get(self, request):
@@ -239,7 +239,7 @@ class SwapRatesView(APIView):
 
 
 class PPPView(APIView):
-    """GET /api/v1/analytics/purchasing-power-parity — PPP deviation analysis."""
+    """GET /api/v1/analytics/purchasing-power-parity - PPP deviation analysis."""
 
     @extend_schema(tags=["analytics"], summary="Purchasing Power Parity analysis")
     def get(self, request):
@@ -282,7 +282,7 @@ class PPPView(APIView):
 
 
 class SABRSmileView(APIView):
-    """POST /api/v1/analytics/sabr-smile — SABR smile calibration."""
+    """POST /api/v1/analytics/sabr-smile - SABR smile calibration."""
 
     @extend_schema(tags=["analytics"], summary="SABR volatility smile calibration")
     def post(self, request):
@@ -352,7 +352,7 @@ class SABRSmileView(APIView):
 
 
 class StrategyBuilderView(APIView):
-    """POST /api/v1/analytics/strategy-builder — Multi-leg FX option strategy."""
+    """POST /api/v1/analytics/strategy-builder - Multi-leg FX option strategy."""
 
     @extend_schema(tags=["analytics"], summary="Multi-leg FX options strategy builder")
     def post(self, request):
@@ -482,7 +482,7 @@ def _classify_strategy(legs: list[dict]) -> str:
 
 
 class FXFixingRateView(APIView):
-    """GET /api/v1/analytics/fixing-rates — WM/Reuters-style FX fixing rates."""
+    """GET /api/v1/analytics/fixing-rates - WM/Reuters-style FX fixing rates."""
 
     @extend_schema(tags=["analytics"], summary="WM/R-style FX fixing rates")
     def get(self, request):
