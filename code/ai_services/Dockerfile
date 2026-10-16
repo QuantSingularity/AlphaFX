@@ -13,8 +13,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-COPY . .
+# The code imports itself as the `ai_services` package (ai_services.models...),
+# so the source must live in /app/ai_services with /app on the import path.
+COPY . ./ai_services/
+
+ENV PYTHONPATH=/app
 
 EXPOSE 8001
 
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["uvicorn", "ai_services.api.main:app", "--host", "0.0.0.0", "--port", "8001"]
