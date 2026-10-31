@@ -38,7 +38,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: "./src/setupTests.ts",
+    setupFiles: "./src/test/setup.ts",
     include: ["src/**/*.{test,spec}.{ts,tsx}"],
     coverage: {
       provider: "v8",
@@ -47,7 +47,7 @@ export default defineConfig({
       exclude: [
         "src/main.tsx",
         "src/vite-env.d.ts",
-        "src/setupTests.ts",
+        "src/test/setup.ts",
         "src/**/*.test.{ts,tsx}",
         "src/**/*.spec.{ts,tsx}",
       ],
