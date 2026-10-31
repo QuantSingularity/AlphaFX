@@ -7,24 +7,28 @@ import { afterEach, vi } from "vitest";
 // stand-in returns another stand-in, so drawing code (including gradients)
 // runs without doing anything.
 const noop = (): unknown =>
-  new Proxy(() => undefined, { get: () => noop, apply: () => noop() });
+  new Proxy(() => undefined, {
+    get: () => noop,
+    apply: () => noop(),
+  });
 
 HTMLCanvasElement.prototype.getContext = vi.fn(
   noop,
 ) as unknown as HTMLCanvasElement["getContext"];
 
-// jsdom has no ResizeObserver either; the landing page watches its canvas size.
+// jsdom does not implement ResizeObserver; the landing page observes canvas size.
 class ResizeObserverStub {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
+  observe(): void {}
+  unobserve(): void {}
+  disconnect(): void {}
 }
+
 globalThis.ResizeObserver =
   ResizeObserverStub as unknown as typeof ResizeObserver;
 
-// Vitest globals are off, so Testing Library cannot register its own cleanup.
-// Unmount rendered trees and clear browser storage so every test starts clean.
+// Reset rendered React trees and browser storage between tests.
 afterEach(() => {
   cleanup();
   localStorage.clear();
+  sessionStorage.clear();
 });
