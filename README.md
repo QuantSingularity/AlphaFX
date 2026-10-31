@@ -150,24 +150,29 @@ pytest
 
 # AI service (from code/ai_services)
 pytest
+
+# Frontend (from frontend)
+npm test
 ```
 
-| Suite              | Test count | Run in CI             |
-| :----------------- | :--------- | :-------------------- |
-| `code/backend`     | 88         | Yes                   |
-| `code/ai_services` | 28         | No, runs locally only |
+| Suite              | Test count | Run in CI |
+| :----------------- | :--------- | :-------- |
+| `code/backend`     | 88         | Yes       |
+| `code/ai_services` | 28         | Yes       |
+| `frontend`         | 49         | Yes       |
 
 See `docs/08_testing_guide.md` for test classes and key assertions.
 
 ## CI/CD Pipeline
 
-GitHub Actions (`.github/workflows/cicd.yml`) runs three jobs on push, pull request, and manual dispatch:
+GitHub Actions (`.github/workflows/cicd.yml`) runs four jobs on push, pull request, and manual dispatch:
 
-| Job                 | Depends on          | What it does                                                                                                                                           |
-| :------------------ | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Code Quality Checks | -                   | Formatter checks across the repository                                                                                                                 |
-| Backend Tests       | Code Quality Checks | Runs `pytest tests/` from the Django backend directory with coverage, and uploads the report as an artifact. Does not run the AI service's test suite. |
-| Frontend Build      | Code Quality Checks | Installs dependencies and produces the production web build (no test step)                                                                             |
+| Job                      | Depends on          | What it does                                                                                                                                                        |
+| :----------------------- | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Code Quality Checks      | -                   | Formatter checks across the repository                                                                                                                              |
+| Backend Test & Build     | Code Quality Checks | Runs `pytest tests/` from the Django backend directory with coverage and uploads the report as an artifact, then builds the backend Docker image and smoke tests it |
+| AI Services Test & Build | Code Quality Checks | Runs `pytest tests/` for the AI service with coverage and uploads the report as an artifact, then builds the AI service Docker image and smoke tests it             |
+| Frontend Test & Build    | Code Quality Checks | Installs dependencies, runs the Vitest suite with coverage (uploaded as an artifact), then produces the production web build and uploads it as an artifact          |
 
 ## Documentation
 
